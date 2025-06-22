@@ -19,7 +19,7 @@ if (isset($_GET['file'])) {
 }
 ?>
 <!DOCTYPE html>
-<!-- Author: George kostopoulos - Date: 21-062025 -->
+<!-- Author: George kostopoulos - Date: 21-06-2025 -->
 <html>
 <head>
     <meta charset='utf-8'>
@@ -79,13 +79,13 @@ if (isset($_GET['file'])) {
         $servername = "localhost";
         $usernamedb = "root";
         $passworddb = "";
-        $db = "dataemployee";
+        $db = "your_data_base";
         
         $conn = mysqli_connect($servername, $usernamedb, $passworddb, $db);
             
         if (!$conn) { echo "Connection failed!"; exit; }
 
-        $query = "SELECT * FROM dataperson WHERE identity='$username' AND mobile='$password'";
+        $query = "SELECT * FROM -your_table- WHERE identity='$username' AND mobile='$password'";
 
         if ($result = mysqli_query($conn, $query)) {
             
